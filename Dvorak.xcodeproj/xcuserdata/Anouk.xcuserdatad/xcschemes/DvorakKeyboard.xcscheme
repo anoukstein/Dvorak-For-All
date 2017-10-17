@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "0710"
+   wasCreatedForAppExtension = "YES"
+   version = "1.8">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33D63EC519CE0D6F000B03C4"
+               BuildableName = "DvorakKeyboard.appex"
+               BlueprintName = "DvorakKeyboard"
+               ReferencedContainer = "container:Dvorak.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3330A9F019CDAB3E00175BD9"
+               BuildableName = "Dvorak.app"
+               BlueprintName = "Dvorak"
+               ReferencedContainer = "container:Dvorak.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33D63EC519CE0D6F000B03C4"
+            BuildableName = "DvorakKeyboard.appex"
+            BlueprintName = "DvorakKeyboard"
+            ReferencedContainer = "container:Dvorak.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Release"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3330A9F019CDAB3E00175BD9"
+            BuildableName = "Dvorak.app"
+            BlueprintName = "Dvorak"
+            ReferencedContainer = "container:Dvorak.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <IDERemoteRunnable
+         RemotePath = "/var/mobile/Containers/Bundle/Application/79E43307-7E39-4DE2-B798-D55CDB0F5BDF/Dvorak.app"
+         BundleIdentifier = "/var/mobile/Containers/Bundle/Application/79E43307-7E39-4DE2-B798-D55CDB0F5BDF/Dvorak.app">
+      </IDERemoteRunnable>
+      <IDERemoteRunnable
+         RemotePath = "/Applications/MobileCal.app"
+         BundleIdentifier = "/Applications/MobileCal.app">
+      </IDERemoteRunnable>
+      <IDERemoteRunnable
+         RemotePath = "/Users/Anouk/Library/Developer/CoreSimulator/Devices/51F5DD5D-9010-40ED-A5A1-29C61DF4F2D6/data/Containers/Bundle/Application/A4D061E0-AEBD-47AA-8526-D0176FFF0C59/Dvorak.app"
+         BundleIdentifier = "/Users/Anouk/Library/Developer/CoreSimulator/Devices/51F5DD5D-9010-40ED-A5A1-29C61DF4F2D6/data/Containers/Bundle/Application/A4D061E0-AEBD-47AA-8526-D0176FFF0C59/Dvorak.app">
+      </IDERemoteRunnable>
+      <IDERemoteRunnable
+         RemotePath = "/Users/Anouk/Library/Developer/CoreSimulator/Devices/51F5DD5D-9010-40ED-A5A1-29C61DF4F2D6/data/Containers/Bundle/Application/F45C7605-50D2-4D6D-A02E-6864E1206ACB/Dvorak.app"
+         BundleIdentifier = "/Users/Anouk/Library/Developer/CoreSimulator/Devices/51F5DD5D-9010-40ED-A5A1-29C61DF4F2D6/data/Containers/Bundle/Application/F45C7605-50D2-4D6D-A02E-6864E1206ACB/Dvorak.app">
+      </IDERemoteRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES"
+      launchAutomaticallySubstyle = "2">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "3330A9F019CDAB3E00175BD9"
+            BuildableName = "Dvorak.app"
+            BlueprintName = "Dvorak"
+            ReferencedContainer = "container:Dvorak.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>

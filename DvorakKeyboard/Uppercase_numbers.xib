@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="DvorakKeyboard" customModuleProvider="target">
+            <connections>
+                <outlet property="capsLockButton" destination="htF-Mw-FzM" id="Yv4-qj-x63"/>
+                <outlet property="text1" destination="9jl-qp-FVX" id="vyt-tw-tVx"/>
+                <outlet property="text2" destination="2ON-Jy-cxu" id="xQz-wD-ciD"/>
+                <outlet property="text3" destination="Ju0-Uy-QgZ" id="g4I-CV-kHx"/>
+                <outlet property="view" destination="3Vx-vD-tTC" id="y4x-J8-QqA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="3Vx-vD-tTC">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="550"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zqs-Zc-opg">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="550"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CUe-VU-JOx">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="87.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jl-qp-FVX">
+                                    <rect key="frame" x="0.0" y="0.0" width="338.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="selectSuggestion:" destination="-1" eventType="touchUpInside" id="6VK-OL-mS3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ON-Jy-cxu">
+                                    <rect key="frame" x="342.5" y="0.0" width="339" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="selectSuggestion:" destination="-1" eventType="touchUpInside" id="6Tm-ju-dYL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ju0-Uy-QgZ">
+                                    <rect key="frame" x="685.5" y="0.0" width="338.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="selectSuggestion:" destination="-1" eventType="touchUpInside" id="woL-MK-FB1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eBi-KZ-VF4">
+                            <rect key="frame" x="0.0" y="92.5" width="1024" height="87.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00r-JY-gv2" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="!">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="CHq-8V-XgD"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="qTA-RD-Wee"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-PO-2Si" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="73.5" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" keyboardKey="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="1">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="EYI-Hl-tbV"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="t5e-Cs-8ZX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ds-Jr-gAS" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="2">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="D0o-gG-wla"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="zsw-LC-M4b"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hs-fV-COs" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="220.5" y="0.0" width="69" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="3">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="jf8-8H-N1M"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Zbv-pk-2Dl"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJ3-0o-MQp" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="293.5" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="4">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="XyD-ba-nhg"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="W86-Qr-Tp2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYf-3G-e1y" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="367" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="5">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="8Gz-RW-l2m"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="bFb-da-jKO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIk-Wf-fKU" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="440.5" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="6">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="q3F-oe-8US"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="d5V-Na-LXJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQc-qm-AeN" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="514" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="7">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="oqD-s1-qEl"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="bC6-YN-RPM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQh-yy-Ur3" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="587.5" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="8">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="Gng-Ot-2DB"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="gkR-C7-tvO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbJ-UR-7d9" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="661" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="9">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="0Og-7v-PJl"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="lBY-M3-NIR"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu7-dw-LFB" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="734.5" y="0.0" width="69" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="0">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="uMI-Zw-Lei"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="VN1-aU-aOS"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqN-QI-D7h" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="807.5" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="[">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="AWe-ej-Hqz"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="0a9-gb-EKf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TyM-9J-aCN" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="881" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="]">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="LPk-2V-BWo"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="1t1-cU-alY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4D-uK-x2O" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="954.5" y="0.0" width="69.5" height="87.5"/>
+                                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="⬅︎">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="pgN-qZ-9bU"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="nM3-uZ-lHZ"/>
+                                        <action selector="endButtonSelected:" destination="-1" eventType="touchUpOutside" id="o40-00-qwo"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NGd-6M-X39">
+                            <rect key="frame" x="0.0" y="185" width="1024" height="87.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gel-7g-1c3" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" keyboardKey="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="'">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="T2T-HA-oD3"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="OWg-ty-8fk"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMC-Lh-sDC" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="79" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" keyboardKey="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title=",">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="ROZ-JB-Vh4"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="VX1-Ub-z1A"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol5-6R-f67" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="158" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" keyboardKey="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title=".">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="NXW-7j-MDQ"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="B7G-5A-Oot"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-dk-l1f" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="237" y="0.0" width="75.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <accessibility key="accessibilityConfiguration">
+                                        <accessibilityTraits key="traits" button="YES" keyboardKey="YES"/>
+                                    </accessibility>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="P">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="iwh-Hi-hKP"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="vbX-Qt-3Yk"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVK-5w-YDT" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="316.5" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="Y">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="jrh-cH-Jkh"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="zNM-gB-Cvq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkz-dI-3X1" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="395.5" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="F">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="dsl-X1-RbS"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="huj-yg-CZY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcw-oR-UyX" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="474.5" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="G">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="hnD-fB-WCs"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Ufl-c4-lgg"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZB-7i-D4y" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="553.5" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="C">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="jGJ-bd-GPf"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="dJP-n8-C0n"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arw-Ib-ySa" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="632.5" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="R">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="oRW-av-dsf"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="7UR-Fv-0Q2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6R-8H-cBX" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="711.5" y="0.0" width="75.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="L">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="01L-3U-Kae"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="NYA-cx-uF9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCF-Tq-gho" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="791" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="/">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="aHR-Sx-0Yt"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Y9J-Qu-jWx"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJ3-Mf-1zG" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="870" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="=">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="ycl-Fw-N1O"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="P5i-kA-N0X"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCo-eB-Mhr" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="949" y="0.0" width="75" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="?">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="pMO-wN-8yq"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="oop-Ba-Ywi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="LVW-Eu-reL">
+                            <rect key="frame" x="0.0" y="277.5" width="1024" height="87.5"/>
+                            <subviews>
+                                <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htF-Mw-FzM" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                    <state key="normal" title="caps lock">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="I8e-Yk-8vo"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Oba-NA-cO7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJy-u1-b3r" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="79" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="A">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="Qno-g3-P17"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="e5K-Bf-YgC"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0l-KB-VWR" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="158" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="O">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="lrQ-3m-rM4"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="dDd-Ql-YFH"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWM-p0-pKS" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="237" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="E">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="Vmx-pH-VzT"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="1za-ws-vug"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1N-oU-Az7" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="316" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="U">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="SCn-e5-Se5"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Pf9-kh-Vbq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZl-Bq-NBe" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="395" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="I">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="pGK-7O-QDT"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="zCS-xa-fN9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgN-CP-z4s" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="474" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="D">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="5r2-GW-a14"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="l4R-ao-bp9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duI-qn-8We" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="553" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="H">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="mr6-Ju-Uoq"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Xfg-T7-Zbz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-35-dO4" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="632" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="T">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="6Cp-yB-F2i"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Sd9-Ic-oUt"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjf-He-nbh" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="711" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="N">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="s2R-so-XSK"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="m5M-Ap-fEF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTL-3E-hqV" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="790" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="S">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="qdO-7u-SGa"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="kqP-Mn-iIp"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCC-ox-7Ar" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="869" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="-">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="XPD-UN-67A"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="KQd-yk-9ba"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8r1-ax-UcP" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="948" y="0.0" width="76" height="87.5"/>
+                                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                    <state key="normal" title="return">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="SIe-zB-oEj"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="ADF-UB-nyC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="MHK-sy-0wX">
+                            <rect key="frame" x="0.0" y="370" width="1024" height="87.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32f-rJ-OWz" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="⬆︎">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="bgT-yB-vt0"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="NHj-iT-xy2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL0-gT-h30" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="85.5" y="0.0" width="82" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title=";">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="anQ-yF-8Oc"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="q6h-vs-ST7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Et-gc-hEC" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="171.5" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="Q">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="5dm-Tb-cQG"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="QZW-Vx-Cib"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5a-ui-RlR" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="257" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="J">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="Be4-4G-eOh"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="I0o-sg-SCy"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHD-dy-bRe" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="342.5" y="0.0" width="82" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="K">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="1zI-Nc-I0h"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="dYr-fX-d2K"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gp0-HH-Cy3" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="428.5" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="X">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="yUF-aB-Tba"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="RWe-ud-FKr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAF-Hk-jR7" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="514" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="B">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="Qj5-0f-BhI"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="nTl-fd-MJD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qv-3D-eFc" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="599.5" y="0.0" width="82" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="M">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="HsN-4V-WHA"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Jf2-K5-OJV"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Orz-Xt-4XU" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="685.5" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="W">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="JlD-NB-oV8"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="hsv-Zq-aIG"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erV-VV-Zru" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="771" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="V">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="v07-dS-Yf7"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="7Fe-4A-qAt"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8T-R3-Wvz" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="856.5" y="0.0" width="82" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="Z">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="stp-T6-sUk"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="4Lw-tC-CmO"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2E-85-8In" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="942.5" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="⬆︎">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="qJz-UT-9iL"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="Q92-nM-fJm"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-R5-9q6">
+                            <rect key="frame" x="0.0" y="462.5" width="1024" height="87.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6F-1g-t15" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="81.5" height="87.5"/>
+                                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="🌐">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="30q-x9-7bA"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="uUl-uu-dXQ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG5-7s-KsU" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="85.5" y="0.0" width="82.5" height="87.5"/>
+                                    <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="#+=">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="yJ1-bD-J0i"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="MzL-7s-4kv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqK-8k-Bsz">
+                                    <rect key="frame" x="172" y="0.0" width="766" height="87.5"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="space">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="2rT-sC-anW"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="zJF-df-ur8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsG-am-J0d" customClass="RoundedButton" customModule="DvorakKeyboard" customModuleProvider="target">
+                                    <rect key="frame" x="942" y="0.0" width="82" height="87.5"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <state key="normal" title="⌨️">
+                                        <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="buttonSelected:" destination="-1" eventType="touchDown" id="Nkq-Gz-gOb"/>
+                                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="GMy-hW-6VP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="eG5-7s-KsU" firstAttribute="width" secondItem="O6F-1g-t15" secondAttribute="width" id="i7v-vJ-fOZ"/>
+                                <constraint firstItem="fsG-am-J0d" firstAttribute="width" secondItem="eG5-7s-KsU" secondAttribute="width" id="q89-ew-dfd"/>
+                                <constraint firstItem="eG5-7s-KsU" firstAttribute="width" secondItem="O6F-1g-t15" secondAttribute="width" id="xiu-1c-9Sm"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="O6F-1g-t15" firstAttribute="width" secondItem="32f-rJ-OWz" secondAttribute="width" id="5La-4y-9dQ"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zqs-Zc-opg" firstAttribute="centerX" secondItem="3Vx-vD-tTC" secondAttribute="centerX" id="4L2-f7-CsS"/>
+                <constraint firstItem="Zqs-Zc-opg" firstAttribute="height" secondItem="3Vx-vD-tTC" secondAttribute="height" id="QVi-qi-d5b"/>
+                <constraint firstItem="Zqs-Zc-opg" firstAttribute="width" secondItem="3Vx-vD-tTC" secondAttribute="width" id="YhV-ns-nXz"/>
+                <constraint firstItem="Zqs-Zc-opg" firstAttribute="centerY" secondItem="3Vx-vD-tTC" secondAttribute="centerY" id="yx1-Zf-RAb"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="210" y="175"/>
+        </view>
+    </objects>
+</document>

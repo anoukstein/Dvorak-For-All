@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dvorak" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pjr-Xy-g6C">
+                                <rect key="frame" x="20" y="144" width="794" height="42.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="uad-3D-0sn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="yZQ-o0-oOW"/>
+                                </constraints>
+                                <string key="text">Installing keyboard: Settings -&gt; General -&gt; Keyboards -&gt; Add New Keyboard -&gt; Dvorak Keyboard  Then use 🌐 button to switch keyboards.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uad-3D-0sn"/>
+                                        <exclude reference="yZQ-o0-oOW"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2iF-9R-1nf">
+                                <rect key="frame" x="20" y="44" width="790" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="ZxM-Ac-P7v"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="272" id="tPt-ld-tES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZxM-Ac-P7v"/>
+                                        <exclude reference="tPt-ld-tES"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVY-fB-0Nt">
+                                <rect key="frame" x="300" y="252.5" width="234" height="30"/>
+                                <state key="normal" title="Check out my main app: iAnatomy">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkToiTunes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v78-U1-ArY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="247" text="Installing Dvorak Keyboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CW-Pr-J7a">
+                                <rect key="frame" x="310" y="93" width="214" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="PaM-HE-5b2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="wwe-aZ-1Va"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PaM-HE-5b2"/>
+                                        <exclude reference="wwe-aZ-1Va"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97092366218566895" green="0.97092366218566895" blue="0.97092366218566895" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Pjr-Xy-g6C" secondAttribute="trailing" constant="20" id="3LP-tm-y4M"/>
+                            <constraint firstItem="2iF-9R-1nf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="A8w-ly-cU0"/>
+                            <constraint firstItem="0CW-Pr-J7a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Grr-Xe-rp7"/>
+                            <constraint firstItem="oVY-fB-0Nt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kj4-BI-K70"/>
+                            <constraint firstItem="2iF-9R-1nf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="bY5-ue-GYb"/>
+                            <constraint firstItem="oVY-fB-0Nt" firstAttribute="top" secondItem="Pjr-Xy-g6C" secondAttribute="bottom" constant="8" id="faK-sw-JqE"/>
+                            <constraint firstItem="oVY-fB-0Nt" firstAttribute="top" secondItem="Pjr-Xy-g6C" secondAttribute="bottom" constant="66" id="gVn-hr-SJL"/>
+                            <constraint firstAttribute="trailing" secondItem="2iF-9R-1nf" secondAttribute="trailing" constant="24" id="mAp-Y6-dZQ"/>
+                            <constraint firstItem="Pjr-Xy-g6C" firstAttribute="top" secondItem="0CW-Pr-J7a" secondAttribute="bottom" constant="31" id="nfN-kK-h0x"/>
+                            <constraint firstItem="0CW-Pr-J7a" firstAttribute="top" secondItem="2iF-9R-1nf" secondAttribute="bottom" constant="19" id="wFo-h3-zqi"/>
+                            <constraint firstItem="Pjr-Xy-g6C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="zhD-f2-8e1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="faK-sw-JqE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="instructionsLabel" destination="Pjr-Xy-g6C" id="MZ8-SM-U8Y"/>
+                        <outlet property="textField" destination="2iF-9R-1nf" id="IAQ-5L-ofZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="146"/>
+        </scene>
+    </scenes>
+</document>

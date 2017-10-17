@@ -1,0 +1,576 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3330A9F719CDAB3E00175BD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330A9F619CDAB3E00175BD9 /* AppDelegate.swift */; };
+		3330A9F919CDAB3E00175BD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3330A9F819CDAB3E00175BD9 /* ViewController.swift */; };
+		3330A9FC19CDAB3E00175BD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3330A9FA19CDAB3E00175BD9 /* Main.storyboard */; };
+		3330AA0119CDAB3E00175BD9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3330A9FF19CDAB3E00175BD9 /* LaunchScreen.xib */; };
+		33D63ECB19CE0D6F000B03C4 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D63ECA19CE0D6F000B03C4 /* KeyboardViewController.swift */; };
+		33D63ECE19CE0D6F000B03C4 /* DvorakKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 33D63EC619CE0D6F000B03C4 /* DvorakKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		33E2090619E42203007182CA /* Lexicon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E2090519E42203007182CA /* Lexicon.swift */; };
+		33E2090D19E44E5C007182CA /* lexicon.json in Resources */ = {isa = PBXBuildFile; fileRef = 33E2090B19E44E5C007182CA /* lexicon.json */; };
+		5A1BC4D81F9654C60000B629 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A1BC4A81F9652D50000B629 /* Images.xcassets */; };
+		5AAD065E1F6ADABA009BE8B5 /* SymbolsLarge.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AAD065D1F6ADABA009BE8B5 /* SymbolsLarge.xib */; };
+		5AAD06601F6AEE8D009BE8B5 /* TextInvestigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAD065F1F6AEE8D009BE8B5 /* TextInvestigation.swift */; };
+		5AF164931F40E4610079BB76 /* Lowercase_numbers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF164921F40E4610079BB76 /* Lowercase_numbers.xib */; };
+		5AF164951F40E46C0079BB76 /* Uppercase_numbers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF164941F40E46C0079BB76 /* Uppercase_numbers.xib */; };
+		960338FD1D352BDB00E7243E /* Lowercase.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960338FB1D352BDB00E7243E /* Lowercase.xib */; };
+		960339001D352C5F00E7243E /* Uppercase.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960338FF1D352C5F00E7243E /* Uppercase.xib */; };
+		960339031D352CE200E7243E /* Numbers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960339011D352CE200E7243E /* Numbers.xib */; };
+		960339041D352CE200E7243E /* Symbols.xib in Resources */ = {isa = PBXBuildFile; fileRef = 960339021D352CE200E7243E /* Symbols.xib */; };
+		961CB91F1D4CFB7000FD1A2A /* Words.db in Resources */ = {isa = PBXBuildFile; fileRef = 961CB91E1D4CFB7000FD1A2A /* Words.db */; };
+		9667FF9B1D4422430004E3BE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9667FF9A1D4422430004E3BE /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33D63ECC19CE0D6F000B03C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3330A9E919CDAB3E00175BD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33D63EC519CE0D6F000B03C4;
+			remoteInfo = DvorakKeyboard;
+		};
+		33D63ECF19CE0D6F000B03C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3330A9E919CDAB3E00175BD9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33D63EC519CE0D6F000B03C4;
+			remoteInfo = DvorakKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		33D63ED419CE0D6F000B03C4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				33D63ECE19CE0D6F000B03C4 /* DvorakKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3330A9F119CDAB3E00175BD9 /* Dvorak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dvorak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3330A9F519CDAB3E00175BD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3330A9F619CDAB3E00175BD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3330A9F819CDAB3E00175BD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3330A9FB19CDAB3E00175BD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3330AA0019CDAB3E00175BD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		33D63EC619CE0D6F000B03C4 /* DvorakKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DvorakKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		33D63EC919CE0D6F000B03C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D63ECA19CE0D6F000B03C4 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		33E2090519E42203007182CA /* Lexicon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lexicon.swift; sourceTree = "<group>"; };
+		33E2090B19E44E5C007182CA /* lexicon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lexicon.json; sourceTree = "<group>"; };
+		5A1BC4A81F9652D50000B629 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5AAD065D1F6ADABA009BE8B5 /* SymbolsLarge.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SymbolsLarge.xib; sourceTree = "<group>"; };
+		5AAD065F1F6AEE8D009BE8B5 /* TextInvestigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInvestigation.swift; sourceTree = "<group>"; };
+		5AF164921F40E4610079BB76 /* Lowercase_numbers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Lowercase_numbers.xib; sourceTree = "<group>"; };
+		5AF164941F40E46C0079BB76 /* Uppercase_numbers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Uppercase_numbers.xib; sourceTree = "<group>"; };
+		960338FB1D352BDB00E7243E /* Lowercase.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Lowercase.xib; sourceTree = "<group>"; };
+		960338FF1D352C5F00E7243E /* Uppercase.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Uppercase.xib; sourceTree = "<group>"; };
+		960339011D352CE200E7243E /* Numbers.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Numbers.xib; sourceTree = "<group>"; };
+		960339021D352CE200E7243E /* Symbols.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Symbols.xib; sourceTree = "<group>"; };
+		961CB91E1D4CFB7000FD1A2A /* Words.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = Words.db; sourceTree = "<group>"; };
+		9667FF9A1D4422430004E3BE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9667FF9C1D44226C0004E3BE /* DvorakKeyboard-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DvorakKeyboard-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3330A9EE19CDAB3E00175BD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D63EC319CE0D6F000B03C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9667FF9B1D4422430004E3BE /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3330A9E819CDAB3E00175BD9 = {
+			isa = PBXGroup;
+			children = (
+				9667FF9A1D4422430004E3BE /* libsqlite3.tbd */,
+				3330A9F319CDAB3E00175BD9 /* Dvorak */,
+				33D63EC719CE0D6F000B03C4 /* DvorakKeyboard */,
+				3330A9F219CDAB3E00175BD9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3330A9F219CDAB3E00175BD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3330A9F119CDAB3E00175BD9 /* Dvorak.app */,
+				33D63EC619CE0D6F000B03C4 /* DvorakKeyboard.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3330A9F319CDAB3E00175BD9 /* Dvorak */ = {
+			isa = PBXGroup;
+			children = (
+				3330A9F619CDAB3E00175BD9 /* AppDelegate.swift */,
+				3330A9F819CDAB3E00175BD9 /* ViewController.swift */,
+				3330A9FA19CDAB3E00175BD9 /* Main.storyboard */,
+				3330A9FF19CDAB3E00175BD9 /* LaunchScreen.xib */,
+				5A1BC4A81F9652D50000B629 /* Images.xcassets */,
+				3330A9F419CDAB3E00175BD9 /* Supporting Files */,
+			);
+			path = Dvorak;
+			sourceTree = "<group>";
+		};
+		3330A9F419CDAB3E00175BD9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3330A9F519CDAB3E00175BD9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33D63EC719CE0D6F000B03C4 /* DvorakKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				33D63ECA19CE0D6F000B03C4 /* KeyboardViewController.swift */,
+				5AAD065F1F6AEE8D009BE8B5 /* TextInvestigation.swift */,
+				960338FF1D352C5F00E7243E /* Uppercase.xib */,
+				960338FB1D352BDB00E7243E /* Lowercase.xib */,
+				960339011D352CE200E7243E /* Numbers.xib */,
+				5AF164921F40E4610079BB76 /* Lowercase_numbers.xib */,
+				5AF164941F40E46C0079BB76 /* Uppercase_numbers.xib */,
+				960339021D352CE200E7243E /* Symbols.xib */,
+				5AAD065D1F6ADABA009BE8B5 /* SymbolsLarge.xib */,
+				33D63EC819CE0D6F000B03C4 /* Supporting Files */,
+				5AAD064C1F69A7BA009BE8B5 /* SpellCheck */,
+				9667FF9C1D44226C0004E3BE /* DvorakKeyboard-Bridging-Header.h */,
+			);
+			path = DvorakKeyboard;
+			sourceTree = "<group>";
+		};
+		33D63EC819CE0D6F000B03C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33D63EC919CE0D6F000B03C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AAD064C1F69A7BA009BE8B5 /* SpellCheck */ = {
+			isa = PBXGroup;
+			children = (
+				33E2090519E42203007182CA /* Lexicon.swift */,
+				33E2090B19E44E5C007182CA /* lexicon.json */,
+				961CB91E1D4CFB7000FD1A2A /* Words.db */,
+			);
+			name = SpellCheck;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3330A9F019CDAB3E00175BD9 /* Dvorak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3330AA1019CDAB3F00175BD9 /* Build configuration list for PBXNativeTarget "Dvorak" */;
+			buildPhases = (
+				3330A9ED19CDAB3E00175BD9 /* Sources */,
+				3330A9EE19CDAB3E00175BD9 /* Frameworks */,
+				3330A9EF19CDAB3E00175BD9 /* Resources */,
+				33D63ED419CE0D6F000B03C4 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33D63ECD19CE0D6F000B03C4 /* PBXTargetDependency */,
+				33D63ED019CE0D6F000B03C4 /* PBXTargetDependency */,
+			);
+			name = Dvorak;
+			productName = Dvorak;
+			productReference = 3330A9F119CDAB3E00175BD9 /* Dvorak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33D63EC519CE0D6F000B03C4 /* DvorakKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33D63ED319CE0D6F000B03C4 /* Build configuration list for PBXNativeTarget "DvorakKeyboard" */;
+			buildPhases = (
+				33D63EC219CE0D6F000B03C4 /* Sources */,
+				33D63EC319CE0D6F000B03C4 /* Frameworks */,
+				33D63EC419CE0D6F000B03C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DvorakKeyboard;
+			productName = DvorakKeyboard;
+			productReference = 33D63EC619CE0D6F000B03C4 /* DvorakKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3330A9E919CDAB3E00175BD9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Anouk Stein, M.D.";
+				TargetAttributes = {
+					3330A9F019CDAB3E00175BD9 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = SPTE4MMPEV;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					33D63EC519CE0D6F000B03C4 = {
+						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = SPTE4MMPEV;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 3330A9EC19CDAB3E00175BD9 /* Build configuration list for PBXProject "Dvorak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3330A9E819CDAB3E00175BD9;
+			productRefGroup = 3330A9F219CDAB3E00175BD9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3330A9F019CDAB3E00175BD9 /* Dvorak */,
+				33D63EC519CE0D6F000B03C4 /* DvorakKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3330A9EF19CDAB3E00175BD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A1BC4D81F9654C60000B629 /* Images.xcassets in Resources */,
+				3330A9FC19CDAB3E00175BD9 /* Main.storyboard in Resources */,
+				3330AA0119CDAB3E00175BD9 /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D63EC419CE0D6F000B03C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				960339031D352CE200E7243E /* Numbers.xib in Resources */,
+				5AF164951F40E46C0079BB76 /* Uppercase_numbers.xib in Resources */,
+				961CB91F1D4CFB7000FD1A2A /* Words.db in Resources */,
+				960339001D352C5F00E7243E /* Uppercase.xib in Resources */,
+				960339041D352CE200E7243E /* Symbols.xib in Resources */,
+				5AAD065E1F6ADABA009BE8B5 /* SymbolsLarge.xib in Resources */,
+				5AF164931F40E4610079BB76 /* Lowercase_numbers.xib in Resources */,
+				33E2090D19E44E5C007182CA /* lexicon.json in Resources */,
+				960338FD1D352BDB00E7243E /* Lowercase.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3330A9ED19CDAB3E00175BD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330A9F919CDAB3E00175BD9 /* ViewController.swift in Sources */,
+				3330A9F719CDAB3E00175BD9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33D63EC219CE0D6F000B03C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33E2090619E42203007182CA /* Lexicon.swift in Sources */,
+				5AAD06601F6AEE8D009BE8B5 /* TextInvestigation.swift in Sources */,
+				33D63ECB19CE0D6F000B03C4 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33D63ECD19CE0D6F000B03C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33D63EC519CE0D6F000B03C4 /* DvorakKeyboard */;
+			targetProxy = 33D63ECC19CE0D6F000B03C4 /* PBXContainerItemProxy */;
+		};
+		33D63ED019CE0D6F000B03C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33D63EC519CE0D6F000B03C4 /* DvorakKeyboard */;
+			targetProxy = 33D63ECF19CE0D6F000B03C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3330A9FA19CDAB3E00175BD9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3330A9FB19CDAB3E00175BD9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3330A9FF19CDAB3E00175BD9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3330AA0019CDAB3E00175BD9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3330AA0E19CDAB3F00175BD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3330AA0F19CDAB3F00175BD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Anouk Stein (SPTE4MMPEV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3330AA1119CDAB3F00175BD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = SPTE4MMPEV;
+				INFOPLIST_FILE = Dvorak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAnatomy.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9bc9a416-3155-4881-bcf0-da0eeabeb06c";
+				PROVISIONING_PROFILE_SPECIFIER = "Dvorak distribution";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3330AA1219CDAB3F00175BD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = SPTE4MMPEV;
+				INFOPLIST_FILE = Dvorak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAnatomy.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9bc9a416-3155-4881-bcf0-da0eeabeb06c";
+				PROVISIONING_PROFILE_SPECIFIER = "Dvorak distribution";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		33D63ED119CE0D6F000B03C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = SPTE4MMPEV;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DvorakKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAnatomy.Dvorak.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "111e01f9-009e-4baa-b1a7-5631c9226a02";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: com.iAnatomy.Dvorak.DvorakKeyboard";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "./DvorakKeyboard/DvorakKeyboard-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		33D63ED219CE0D6F000B03C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = SPTE4MMPEV;
+				INFOPLIST_FILE = DvorakKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iAnatomy.Dvorak.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "111e01f9-009e-4baa-b1a7-5631c9226a02";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: com.iAnatomy.Dvorak.DvorakKeyboard";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "./DvorakKeyboard/DvorakKeyboard-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3330A9EC19CDAB3E00175BD9 /* Build configuration list for PBXProject "Dvorak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3330AA0E19CDAB3F00175BD9 /* Debug */,
+				3330AA0F19CDAB3F00175BD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3330AA1019CDAB3F00175BD9 /* Build configuration list for PBXNativeTarget "Dvorak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3330AA1119CDAB3F00175BD9 /* Debug */,
+				3330AA1219CDAB3F00175BD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33D63ED319CE0D6F000B03C4 /* Build configuration list for PBXNativeTarget "DvorakKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33D63ED119CE0D6F000B03C4 /* Debug */,
+				33D63ED219CE0D6F000B03C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3330A9E919CDAB3E00175BD9 /* Project object */;
+}
